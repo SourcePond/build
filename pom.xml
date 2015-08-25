@@ -35,6 +35,7 @@
 		<maven-source-plugin.version>2.4</maven-source-plugin.version>
 		<maven-javadoc-plugin.version>2.10.3</maven-javadoc-plugin.version>
 		<maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
+		<copy-rename-maven-plugin.version>1.0.1</copy-rename-maven-plugin.version>
 
 		<!-- Dependency versions -->
 		<slf4j-api.version>1.7.12</slf4j-api.version>
@@ -44,6 +45,7 @@
 		<mockito-all.version>2.0.2-beta</mockito-all.version>
 		<javassist.version>3.20.0-GA</javassist.version>
 		<asm.version>5.0.4</asm.version>
+		<guice.version>4.0</guice.version>
 
 		<!-- Project encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -90,6 +92,11 @@
 				<artifactId>asm-all</artifactId>
 				<version>${asm.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.google.inject</groupId>
+				<artifactId>guice</artifactId>
+				<version>${guice.version}</version>
+			</dependency>
 
 			<!-- Testing -->
 			<dependency>
@@ -135,6 +142,11 @@
 	<build>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>com.coderplus.maven.plugins</groupId>
+					<artifactId>copy-rename-maven-plugin</artifactId>
+					<version>${copy-rename-maven-plugin.version}</version>
+				</plugin>
 				<plugin>
 					<groupId>com.googlecode.maven-download-plugin</groupId>
 					<artifactId>download-maven-plugin</artifactId>
