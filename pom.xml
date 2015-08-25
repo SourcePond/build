@@ -93,11 +93,13 @@
 
 			<!-- Testing -->
 			<dependency>
+				<scope>test</scope>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>${junit.version}</version>
 			</dependency>
 			<dependency>
+				<scope>test</scope>
 				<groupId>org.mockito</groupId>
 				<artifactId>mockito-all</artifactId>
 				<version>${mockito-all.version}</version>
@@ -121,12 +123,10 @@
 
 		<!-- Testing -->
 		<dependency>
-			<scope>test</scope>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 		</dependency>
 		<dependency>
-			<scope>test</scope>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
 		</dependency>
