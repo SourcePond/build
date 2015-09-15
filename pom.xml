@@ -25,8 +25,6 @@
 
 	<properties>
 		<!-- Plugin versions -->
-		<maven-plugin-annotations.version>3.4</maven-plugin-annotations.version>
-		<maven-plugin-plugin.version>3.4</maven-plugin-plugin.version>
 		<maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
 		<maven-failsafe-plugin.version>2.18.1</maven-failsafe-plugin.version>
 		<sisu-maven-plugin.version>0.3.1</sisu-maven-plugin.version>
@@ -157,11 +155,6 @@
 					<groupId>com.googlecode.maven-download-plugin</groupId>
 					<artifactId>download-maven-plugin</artifactId>
 					<version>${download-maven-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-plugin-plugin</artifactId>
-					<version>${maven-plugin-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
