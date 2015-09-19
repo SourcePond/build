@@ -45,6 +45,7 @@
 		<javassist.version>3.20.0-GA</javassist.version>
 		<asm.version>5.0.4</asm.version>
 		<guice.version>4.0</guice.version>
+		<guava.version>19.0-rc2</guava.version>
 
 		<!-- Project encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -100,6 +101,11 @@
 				<groupId>com.google.inject</groupId>
 				<artifactId>guice</artifactId>
 				<version>${guice.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
 			</dependency>
 
 			<!-- Testing -->
