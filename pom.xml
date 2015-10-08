@@ -25,6 +25,7 @@
 
 	<properties>
 		<!-- Plugin versions -->
+		<maven-jar-plugin.version>2.6</maven-jar-plugin.version>
 		<maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
 		<maven-failsafe-plugin.version>2.18.1</maven-failsafe-plugin.version>
 		<sisu-maven-plugin.version>0.3.1</sisu-maven-plugin.version>
@@ -163,6 +164,11 @@
 	<build>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${maven-jar-plugin.version}</version>
+				</plugin>
 				<plugin>
 					<groupId>com.coderplus.maven.plugins</groupId>
 					<artifactId>copy-rename-maven-plugin</artifactId>
