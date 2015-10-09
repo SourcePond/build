@@ -41,7 +41,8 @@
 		<commons-lang3.version>3.4</commons-lang3.version>
 		<commons-codec.version>1.10</commons-codec.version>
 		<junit.version>4.12</junit.version>
-		<mockito-all.version>2.0.2-beta</mockito-all.version>
+		<mockito.version>2.0.2-beta</mockito.version>
+		<objenesis.version>2.2</objenesis.version>
 		<javassist.version>3.20.0-GA</javassist.version>
 		<asm.version>5.0.4</asm.version>
 		<guice.version>4.0</guice.version>
@@ -113,8 +114,14 @@
 			<dependency>
 				<scope>test</scope>
 				<groupId>org.mockito</groupId>
-				<artifactId>mockito-all</artifactId>
-				<version>${mockito-all.version}</version>
+				<artifactId>mockito-core</artifactId>
+				<version>${mockito.version}</version>
+			</dependency>
+			<dependency>
+				<scope>test</scope>
+				<groupId>org.objenesis</groupId>
+				<artifactId>objenesis</artifactId>
+				<version>${objenesis.version}</version>
 			</dependency>
 			<dependency>
 				<scope>test</scope>
@@ -156,7 +163,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
+			<artifactId>mockito-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.objenesis</groupId>
+			<artifactId>objenesis</artifactId>
 		</dependency>
 	</dependencies>
 
