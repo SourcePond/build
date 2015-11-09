@@ -392,7 +392,7 @@
 	<distributionManagement>
 		<repository>
 			<id>ossrh-stage</id>
-			<name>SourcePond Release Repository</name>
+			<name>SourcePond Stage Repository</name>
 			<url>${deployment.baseurl}/service/local/staging/deploy/maven2/</url>
 		</repository>
 		<snapshotRepository>
