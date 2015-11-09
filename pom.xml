@@ -326,6 +326,9 @@
 							<goal>site</goal>
 						</goals>
 						<phase>site</phase>
+						<configuration>
+							<server>github</server>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
