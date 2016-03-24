@@ -1,0 +1,1 @@
+This is the parent POM for all OSGi-bundles published by SourcePond.
