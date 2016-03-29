@@ -22,9 +22,10 @@
 	<description>
 		Base project object model for all projects published by SourcePond.
 	</description>
-	
+
 	<modules>
 		<module>bundle</module>
+		<module>bundle-test</module>
 		<module>maven-plugin</module>
 	</modules>
 
@@ -299,6 +300,17 @@
 		</pluginManagement>
 
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
