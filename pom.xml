@@ -15,7 +15,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ch.sourcepond</groupId>
 	<artifactId>build</artifactId>
-	<version>0.2.1-SNAPSHOT</version>
+	<version>0.3.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Base build POM</name>
 	<inceptionYear>2015</inceptionYear>
@@ -24,7 +24,7 @@
 	</description>
 	
 	<modules>
-		<module>component</module>
+		<module>bundle</module>
 		<module>maven-plugin</module>
 	</modules>
 
