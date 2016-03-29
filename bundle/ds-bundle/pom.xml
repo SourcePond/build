@@ -37,6 +37,13 @@
 					<groupId>org.apache.felix</groupId>
 					<artifactId>maven-scr-plugin</artifactId>
 					<version>${maven-scr-plugin.version}</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>scr</goal>
+							</goals>
+						</execution>
+					</executions>
 				</plugin>
 			</plugins>
 		</pluginManagement>
