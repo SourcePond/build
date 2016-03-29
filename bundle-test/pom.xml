@@ -26,7 +26,6 @@
 	</description>
 
 	<properties>
-		<pax-exam.version>4.8.0</pax-exam.version>
 		<pax-url-aether.version>2.4.6</pax-url-aether.version>
 		<felix.framework.version>5.4.0</felix.framework.version>
 		<logback-core.version>1.1.6</logback-core.version>

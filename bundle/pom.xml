@@ -31,13 +31,8 @@
 	</modules>
 
 	<properties>
-		<!-- Plugin versions -->
-		<maven-bundle-plugin.version>3.0.1</maven-bundle-plugin.version>
-
 		<!-- Dependency versions -->
 		<org.osgi.core.version>6.0.0</org.osgi.core.version>
-		<pax-exam.version>4.8.0</pax-exam.version>
-		<logback-core.version>1.1.6</logback-core.version>
 	</properties>
 
 	<dependencyManagement>
@@ -54,69 +49,10 @@
 				<artifactId>org.osgi.compendium</artifactId>
 				<version>${org.osgi.core.version}</version>
 			</dependency>
-
-			<!-- Test dependencies -->
-			<dependency>
-				<scope>test</scope>
-				<groupId>org.ops4j.pax.exam</groupId>
-				<artifactId>pax-exam-spi</artifactId>
-				<version>${pax-exam.version}</version>
-			</dependency>
-			<dependency>
-				<scope>test</scope>
-				<groupId>org.ops4j.pax.exam</groupId>
-				<artifactId>pax-exam-junit4</artifactId>
-				<version>${pax-exam.version}</version>
-			</dependency>
-			<dependency>
-				<scope>test</scope>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-core</artifactId>
-				<version>${logback-core.version}</version>
-			</dependency>
-			<dependency>
-				<scope>test</scope>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-classic</artifactId>
-				<version>${logback-core.version}</version>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
-	<dependencies>
-		<dependency>
-			<scope>test</scope>
-			<groupId>org.ops4j.pax.exam</groupId>
-			<artifactId>pax-exam-spi</artifactId>
-		</dependency>
-		<dependency>
-			<scope>test</scope>
-			<groupId>org.ops4j.pax.exam</groupId>
-			<artifactId>pax-exam-junit4</artifactId>
-		</dependency>
-		<dependency>
-			<scope>test</scope>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-core</artifactId>
-		</dependency>
-		<dependency>
-			<scope>test</scope>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-		</dependency>
-	</dependencies>
-
 	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.felix</groupId>
-					<artifactId>maven-bundle-plugin</artifactId>
-					<extensions>true</extensions>
-					<version>${maven-bundle-plugin.version}</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
