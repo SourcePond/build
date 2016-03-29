@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>ch.sourcepond</groupId>
 		<artifactId>build</artifactId>
-		<version>0.3.0</version>
+		<version>0.3.1-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ch.sourcepond.maven.plugins</groupId>
@@ -205,7 +205,7 @@
 		<url>${git.url}</url>
 		<connection>${git.protocol.url}</connection>
 		<developerConnection>${git.protocol.url}</developerConnection>
-		<tag>build-0.3.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 </project>
 
