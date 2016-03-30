@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<!-- Licensed to the Apache Software Foundation (ASF) under one or more 
 		contributor license agreements. See the NOTICE file distributed with this 
@@ -25,14 +26,25 @@
 	</description>
 
 	<properties>
-		<pax-url-aether.version>2.4.6</pax-url-aether.version>
+		<!-- Plugin versions -->
+		<depends-maven-plugin.version>1.3.1</depends-maven-plugin.version>
+
+		<!-- Dependency versions -->
+		<pax-url.version>2.4.6</pax-url.version>
 		<felix.framework.version>5.4.0</felix.framework.version>
 		<logback-core.version>1.1.6</logback-core.version>
+		<bundle-test-support.version>0.0.1</bundle-test-support.version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
 			<!-- Test dependencies -->
+			<dependency>
+				<scope>test</scope>
+				<groupId>ch.sourcepond.testing</groupId>
+				<artifactId>bundle-test-support</artifactId>
+				<version>${bundle-test-support.version}</version>
+			</dependency>
 			<dependency>
 				<scope>test</scope>
 				<groupId>org.ops4j.pax.exam</groupId>
@@ -61,7 +73,13 @@
 				<scope>test</scope>
 				<groupId>org.ops4j.pax.url</groupId>
 				<artifactId>pax-url-aether</artifactId>
-				<version>${pax-url-aether.version}</version>
+				<version>${pax-url.version}</version>
+			</dependency>
+			<dependency>
+				<scope>test</scope>
+				<groupId>org.ops4j.pax.url</groupId>
+				<artifactId>pax-url-wrap</artifactId>
+				<version>${pax-url.version}</version>
 			</dependency>
 			<dependency>
 				<scope>test</scope>
@@ -85,6 +103,11 @@
 	</dependencyManagement>
 
 	<dependencies>
+		<dependency>
+			<scope>test</scope>
+			<groupId>ch.sourcepond.testing</groupId>
+			<artifactId>bundle-test-support</artifactId>
+		</dependency>
 		<dependency>
 			<scope>test</scope>
 			<groupId>org.ops4j.pax.exam</groupId>
@@ -112,6 +135,11 @@
 		</dependency>
 		<dependency>
 			<scope>test</scope>
+			<groupId>org.ops4j.pax.url</groupId>
+			<artifactId>pax-url-wrap</artifactId>
+		</dependency>
+		<dependency>
+			<scope>test</scope>
 			<groupId>org.apache.felix</groupId>
 			<artifactId>org.apache.felix.framework</artifactId>
 		</dependency>
@@ -126,5 +154,31 @@
 			<artifactId>logback-classic</artifactId>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.servicemix.tooling</groupId>
+					<artifactId>depends-maven-plugin</artifactId>
+					<version>${depends-maven-plugin.version}</version>
+					<executions>
+						<execution>
+							<id>generate-depends-file</id>
+							<goals>
+								<goal>generate-depends-file</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.servicemix.tooling</groupId>
+				<artifactId>depends-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>
 
