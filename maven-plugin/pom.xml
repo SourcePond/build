@@ -20,7 +20,7 @@
 	<groupId>ch.sourcepond.maven.plugins</groupId>
 	<artifactId>maven-plugin</artifactId>
 	<packaging>pom</packaging>
-	<name>Maven Plugin Base-POM</name>
+	<name>Base-POM for Maven Plugins</name>
 	<inceptionYear>2015</inceptionYear>
 	<description>
 		Base project object model for all Maven-plugin projects published by SourcePond.
@@ -203,12 +203,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<scm>
-		<url>${git.url}</url>
-		<connection>${git.protocol.url}</connection>
-		<developerConnection>${git.protocol.url}</developerConnection>
-		<tag>HEAD</tag>
-	</scm>
 </project>
 
