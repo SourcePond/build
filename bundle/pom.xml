@@ -32,6 +32,9 @@
 	<properties>
 		<!-- Dependency versions -->
 		<org.osgi.core.version>6.0.0</org.osgi.core.version>
+		
+		<!-- SCM configuration -->
+		<repo.project>${project.parent.artifactId}</repo.project>
 	</properties>
 
 	<dependencyManagement>

@@ -76,7 +76,8 @@
 		<!-- This property is also used by the github-site-plugin -->
 		<github.global.server>github</github.global.server>
 		<repo.domain>${github.global.server}.com</repo.domain>
-		<repo.path>SourcePond/${project.artifactId}</repo.path>
+		<repo.project>${project.artifactId}</repo.project>
+		<repo.path>${project.organization.name}/${repo.project}</repo.path>
 		<project.scm.id>${github.global.server}</project.scm.id>
 	</properties>
 
@@ -395,7 +396,8 @@
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
 				<configuration>
-					<message>Creating site for ${project.artifactId} / ${project.version}</message>
+					<message>Creating site for ${project.artifactId} /
+						${project.version}</message>
 				</configuration>
 				<executions>
 					<execution>
@@ -439,11 +441,11 @@
 			</build>
 		</profile>
 	</profiles>
-	
-	<url>https://${repo.domain}/${repo.path}</url>
+
+	<url>https://sourcepond.github.io/${repo.project}</url>
 
 	<scm>
-		<url>${project.url}</url>
+		<url>https://${repo.domain}/${repo.path}</url>
 		<connection>scm:git:${project.scm.url}.git</connection>
 		<developerConnection>scm:git:ssh://${repo.domain}/${repo.path}.git</developerConnection>
 		<tag>HEAD</tag>
@@ -474,11 +476,15 @@
 		</snapshotRepository>
 	</distributionManagement>
 
+	<organization>
+		<name>SourcePond</name>
+	</organization>
+
 	<developers>
 		<developer>
 			<id>sourcepond</id>
 			<name>Roland Hauser</name>
-			<organization>SourcePond</organization>
+			<organization>${project.organization.name}</organization>
 			<timezone>+1</timezone>
 			<email>sourcepond@gmail.com</email>
 		</developer>

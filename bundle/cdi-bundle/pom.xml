@@ -32,6 +32,9 @@
 		<!-- Dependency versions -->
 		<pax-cdi-api.version>1.0.0.RC1</pax-cdi-api.version>
 		<javax.enterprise.cdi-api>1.2</javax.enterprise.cdi-api>
+		
+		<!-- SCM configuration -->
+		<repo.project>build</repo.project>
 	</properties>
 
 	<dependencyManagement>

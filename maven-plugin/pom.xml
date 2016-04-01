@@ -36,6 +36,9 @@
 		<!-- Dependency versions -->
 		<org.eclipse.sisu.inject.version>0.3.2</org.eclipse.sisu.inject.version>
 		<maven-verifier.version>1.6</maven-verifier.version>
+		
+		<!-- SCM configuration -->
+		<repo.project>${project.parent.artifactId}</repo.project>
 	</properties>
 
 	<dependencyManagement>
