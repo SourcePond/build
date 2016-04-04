@@ -336,7 +336,7 @@
 						<knownHosts>/private/sourcepond/.ssh/known_hosts</knownHosts>
 						<releaseGoals>
 							<releaseGoal>clean</releaseGoal>
-							<releaseGoal>site</releaseGoal>
+							<!-- <releaseGoal>site</releaseGoal>  -->
 							<releaseGoal>deploy</releaseGoal>
 						</releaseGoals>
 					</configuration>
