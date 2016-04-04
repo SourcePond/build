@@ -333,6 +333,7 @@
 					<version>${multi-module-maven-release-plugin.version}</version>
 					<configuration>
 						<serverId>github</serverId>
+						<knownHosts>/private/sourcepond/.ssh/known_hosts</knownHosts>
 						<releaseGoals>
 							<releaseGoal>clean</releaseGoal>
 							<releaseGoal>site</releaseGoal>
