@@ -43,7 +43,7 @@
 		<maven-project-info-reports-plugin.version>2.8.1</maven-project-info-reports-plugin.version>
 		<github.site-maven-plugin.version>0.12</github.site-maven-plugin.version>
 		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
-		<multi-module-maven-release-plugin.version>1.4.4</multi-module-maven-release-plugin.version>
+		<multi-module-maven-release-plugin.version>1.4.6</multi-module-maven-release-plugin.version>
 		<maven-bundle-plugin.version>3.0.1</maven-bundle-plugin.version>
 
 		<!-- Dependency versions -->
