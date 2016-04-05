@@ -334,6 +334,7 @@
 					<configuration>
 						<serverId>github</serverId>
 						<knownHosts>/private/sourcepond/.ssh/known_hosts</knownHosts>
+						<userSettings>/private/sourcepond/settings.xml</userSettings>
 						<releaseGoals>
 							<releaseGoal>clean</releaseGoal>
 							<!-- <releaseGoal>site</releaseGoal>  -->
@@ -407,7 +408,7 @@
 						</goals>
 						<phase>site</phase>
 						<configuration>
-							<server>github-site</server>
+							<server>github</server>
 						</configuration>
 					</execution>
 				</executions>
