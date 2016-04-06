@@ -229,6 +229,13 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>${maven-jar-plugin.version}</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>test-jar</goal>
+							</goals>
+						</execution>
+					</executions>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -336,7 +343,7 @@
 						<userSettings>/private/sourcepond/settings.xml</userSettings>
 						<releaseGoals>
 							<releaseGoal>clean</releaseGoal>
-							<!-- <releaseGoal>site</releaseGoal>  -->
+							<!-- <releaseGoal>site</releaseGoal> -->
 							<releaseGoal>deploy</releaseGoal>
 						</releaseGoals>
 					</configuration>
@@ -345,17 +352,6 @@
 		</pluginManagement>
 
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>test-jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
