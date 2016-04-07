@@ -409,6 +409,9 @@
 						<!-- <releaseGoal>site</releaseGoal> -->
 						<releaseGoal>deploy</releaseGoal>
 					</releaseGoals>
+					<releaseProfiles>
+						<releaseProfile>release</releaseProfile>
+					</releaseProfiles>
 				</configuration>
 			</plugin>
 		</plugins>
