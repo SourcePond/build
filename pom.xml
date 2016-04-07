@@ -42,7 +42,6 @@
 		<maven-site-plugin.version>3.4</maven-site-plugin.version>
 		<maven-project-info-reports-plugin.version>2.8.1</maven-project-info-reports-plugin.version>
 		<github.site-maven-plugin.version>0.12</github.site-maven-plugin.version>
-		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
 		<multi-module-maven-release-plugin.version>1.4.6</multi-module-maven-release-plugin.version>
 
 		<!-- Dependency versions -->
@@ -339,24 +338,9 @@
 					<version>${github.site-maven-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-release-plugin</artifactId>
-					<version>${maven-release-plugin.version}</version>
-				</plugin>
-				<plugin>
 					<groupId>com.github.danielflower.mavenplugins</groupId>
 					<artifactId>multi-module-maven-release-plugin</artifactId>
 					<version>${multi-module-maven-release-plugin.version}</version>
-					<configuration>
-						<serverId>github</serverId>
-						<knownHosts>/private/sourcepond/.ssh/known_hosts</knownHosts>
-						<userSettings>/private/sourcepond/settings.xml</userSettings>
-						<releaseGoals>
-							<releaseGoal>clean</releaseGoal>
-							<!-- <releaseGoal>site</releaseGoal> -->
-							<releaseGoal>deploy</releaseGoal>
-						</releaseGoals>
-					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -413,6 +397,20 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>com.github.danielflower.mavenplugins</groupId>
+				<artifactId>multi-module-maven-release-plugin</artifactId>
+				<configuration>
+					<serverId>github</serverId>
+					<knownHosts>/private/sourcepond/.ssh/known_hosts</knownHosts>
+					<userSettings>/private/sourcepond/settings.xml</userSettings>
+					<releaseGoals>
+						<releaseGoal>clean</releaseGoal>
+						<!-- <releaseGoal>site</releaseGoal> -->
+						<releaseGoal>deploy</releaseGoal>
+					</releaseGoals>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -422,10 +420,6 @@
 			<id>release</id>
 			<build>
 				<plugins>
-					<plugin>
-						<groupId>com.github.danielflower.mavenplugins</groupId>
-						<artifactId>multi-module-maven-release-plugin</artifactId>
-					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
