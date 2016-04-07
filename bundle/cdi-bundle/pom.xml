@@ -27,7 +27,6 @@
 	<properties>
 		<!-- Plugin versions -->
 		<maven-scr-plugin.version>1.21.0</maven-scr-plugin.version>
-		<maven-paxexam-plugin.version>1.2.4</maven-paxexam-plugin.version>
 
 		<!-- Dependency versions -->
 		<pax-cdi-api.version>1.0.0.RC1</pax-cdi-api.version>
@@ -59,25 +58,5 @@
 			<artifactId>cdi-api</artifactId>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>test-jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 </project>
 
