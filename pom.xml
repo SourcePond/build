@@ -46,18 +46,19 @@
 		<multi-module-maven-release-plugin.version>1.4.6</multi-module-maven-release-plugin.version>
 
 		<!-- Dependency versions -->
+		<org.osgi.core.version>6.0.0</org.osgi.core.version>
 		<slf4j-api.version>1.7.12</slf4j-api.version>
 		<geronimo-atinject_1.0_spec.version>1.0</geronimo-atinject_1.0_spec.version>
 		<commons-lang3.version>3.4</commons-lang3.version>
 		<commons-codec.version>1.10</commons-codec.version>
 		<junit.version>4.12</junit.version>
-		<mockito.version>2.0.2-beta</mockito.version>
+		<mockito.version>2.0.27-beta</mockito.version>
+
 		<objenesis.version>2.2</objenesis.version>
 		<javassist.version>3.20.0-GA</javassist.version>
 		<asm.version>5.0.4</asm.version>
 		<guice.version>4.0</guice.version>
 		<guava.version>19.0-rc2</guava.version>
-		<quasar.version>0.7.4</quasar.version>
 		<logback-core.version>1.1.6</logback-core.version>
 		<pax-exam.version>4.8.0</pax-exam.version>
 
@@ -82,6 +83,15 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<!-- provided -->
+			<dependency>
+				<scope>provided</scope>
+				<groupId>org.osgi</groupId>
+				<artifactId>org.osgi.core</artifactId>
+				<version>${org.osgi.core.version}</version>
+			</dependency>
+
+			<!-- compile -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
@@ -116,12 +126,6 @@
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
 				<version>${guava.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>co.paralleluniverse</groupId>
-				<artifactId>quasar-core</artifactId>
-				<classifier>jdk8</classifier>
-				<version>${quasar.version}</version>
 			</dependency>
 
 			<!-- Testing -->
@@ -159,6 +163,12 @@
 				<scope>test</scope>
 				<groupId>org.ops4j.pax.exam</groupId>
 				<artifactId>pax-exam</artifactId>
+				<version>${pax-exam.version}</version>
+			</dependency>
+			<dependency>
+				<scope>test</scope>
+				<groupId>org.ops4j.pax.exam</groupId>
+				<artifactId>pax-exam-spi</artifactId>
 				<version>${pax-exam.version}</version>
 			</dependency>
 			<dependency>
@@ -388,7 +398,8 @@
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
 				<configuration>
-					<message>Creating site for ${project.artifactId} / ${project.version}</message>
+					<message>Creating site for ${project.artifactId} /
+						${project.version}</message>
 				</configuration>
 				<executions>
 					<execution>

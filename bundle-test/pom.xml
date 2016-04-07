@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<!-- Licensed to the Apache Software Foundation (ASF) under one or more 
 		contributor license agreements. See the NOTICE file distributed with this 
@@ -29,11 +30,16 @@
 		<depends-maven-plugin.version>1.3.1</depends-maven-plugin.version>
 
 		<!-- Dependency versions -->
+		<bundle-test-support.version>0.0.1</bundle-test-support.version>
 		<pax-url.version>2.4.6</pax-url.version>
 		<felix.framework.version>5.4.0</felix.framework.version>
+		<org.apache.aries.util.version>1.1.1</org.apache.aries.util.version>
+		<org.apache.aries.proxy.api.version>1.0.1</org.apache.aries.proxy.api.version>
+		<org.apache.aries.proxy.impl.version>1.0.5</org.apache.aries.proxy.impl.version>
+		<org.apache.aries.blueprint.core.version>1.6.0</org.apache.aries.blueprint.core.version>
 		<logback-core.version>1.1.6</logback-core.version>
-		<bundle-test-support.version>0.0.1</bundle-test-support.version>
-		
+		<net.bytebuddy.version>0.6.11</net.bytebuddy.version>
+
 		<!-- SCM configuration -->
 		<repo.project>${project.parent.artifactId}</repo.project>
 	</properties>
@@ -46,12 +52,6 @@
 				<groupId>ch.sourcepond.testing</groupId>
 				<artifactId>bundle-test-support</artifactId>
 				<version>${bundle-test-support.version}</version>
-			</dependency>
-			<dependency>
-				<scope>test</scope>
-				<groupId>org.ops4j.pax.exam</groupId>
-				<artifactId>pax-exam-spi</artifactId>
-				<version>${pax-exam.version}</version>
 			</dependency>
 			<dependency>
 				<scope>test</scope>
@@ -101,59 +101,95 @@
 				<artifactId>logback-classic</artifactId>
 				<version>${logback-core.version}</version>
 			</dependency>
+			<dependency>
+				<scope>test</scope>
+				<groupId>org.apache.aries</groupId>
+				<artifactId>org.apache.aries.util</artifactId>
+				<version>${org.apache.aries.util.version}</version>
+			</dependency>
+			<dependency>
+				<scope>test</scope>
+				<groupId>org.apache.aries.proxy</groupId>
+				<artifactId>org.apache.aries.proxy.api</artifactId>
+				<version>${org.apache.aries.proxy.api.version}</version>
+			</dependency>
+			<dependency>
+				<scope>test</scope>
+				<groupId>org.apache.aries.proxy</groupId>
+				<artifactId>org.apache.aries.proxy.impl</artifactId>
+				<version>${org.apache.aries.proxy.impl.version}</version>
+			</dependency>
+			<dependency>
+				<scope>test</scope>
+				<groupId>org.apache.aries.blueprint</groupId>
+				<artifactId>org.apache.aries.blueprint.core</artifactId>
+				<version>${org.apache.aries.blueprint.core.version}</version>
+			</dependency>
+			<dependency>
+				<scope>test</scope>
+				<groupId>net.bytebuddy</groupId>
+				<artifactId>byte-buddy</artifactId>
+				<version>${net.bytebuddy.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
 		<dependency>
-			<scope>test</scope>
 			<groupId>ch.sourcepond.testing</groupId>
 			<artifactId>bundle-test-support</artifactId>
 		</dependency>
 		<dependency>
-			<scope>test</scope>
 			<groupId>org.ops4j.pax.exam</groupId>
 			<artifactId>pax-exam-spi</artifactId>
 		</dependency>
 		<dependency>
-			<scope>test</scope>
 			<groupId>org.ops4j.pax.exam</groupId>
 			<artifactId>pax-exam-junit4</artifactId>
 		</dependency>
 		<dependency>
-			<scope>test</scope>
 			<groupId>org.ops4j.pax.exam</groupId>
 			<artifactId>pax-exam-container-native</artifactId>
 		</dependency>
 		<dependency>
-			<scope>test</scope>
 			<groupId>org.ops4j.pax.exam</groupId>
 			<artifactId>pax-exam-link-mvn</artifactId>
 		</dependency>
 		<dependency>
-			<scope>test</scope>
 			<groupId>org.ops4j.pax.url</groupId>
 			<artifactId>pax-url-aether</artifactId>
 		</dependency>
 		<dependency>
-			<scope>test</scope>
 			<groupId>org.ops4j.pax.url</groupId>
 			<artifactId>pax-url-wrap</artifactId>
 		</dependency>
 		<dependency>
-			<scope>test</scope>
 			<groupId>org.apache.felix</groupId>
 			<artifactId>org.apache.felix.framework</artifactId>
 		</dependency>
 		<dependency>
-			<scope>test</scope>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-core</artifactId>
 		</dependency>
 		<dependency>
-			<scope>test</scope>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.aries</groupId>
+			<artifactId>org.apache.aries.util</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.aries.proxy</groupId>
+			<artifactId>org.apache.aries.proxy.api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.aries.proxy</groupId>
+			<artifactId>org.apache.aries.proxy.impl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.aries.blueprint</groupId>
+			<artifactId>org.apache.aries.blueprint.core</artifactId>
 		</dependency>
 	</dependencies>
 
