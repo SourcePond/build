@@ -15,7 +15,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ch.sourcepond</groupId>
 	<artifactId>build</artifactId>
-	<version>0.4-SNAPSHOT</version>
+	<version>0.5-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Base build POM</name>
 	<inceptionYear>2015</inceptionYear>
