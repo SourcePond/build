@@ -32,22 +32,21 @@
 	<properties>
 		<!-- Plugin versions -->
 		<maven-jar-plugin.version>2.6</maven-jar-plugin.version>
-		<maven-surefire-plugin.version>2.19</maven-surefire-plugin.version>
-		<maven-failsafe-plugin.version>2.19</maven-failsafe-plugin.version>
+		<maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
+		<maven-failsafe-plugin.version>2.19.1</maven-failsafe-plugin.version>
 		<maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
-		<jacoco-maven-plugin.version>0.7.5.201505241946</jacoco-maven-plugin.version>
-		<maven-source-plugin.version>2.4</maven-source-plugin.version>
+		<jacoco-maven-plugin.version>0.7.6.201602180812</jacoco-maven-plugin.version>
+		<maven-source-plugin.version>3.0.0</maven-source-plugin.version>
 		<maven-javadoc-plugin.version>2.10.3</maven-javadoc-plugin.version>
 		<maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
-		<maven-site-plugin.version>3.4</maven-site-plugin.version>
-		<maven-project-info-reports-plugin.version>2.8.1</maven-project-info-reports-plugin.version>
+		<maven-site-plugin.version>3.5</maven-site-plugin.version>
+		<maven-project-info-reports-plugin.version>2.9</maven-project-info-reports-plugin.version>
 		<github.site-maven-plugin.version>0.12</github.site-maven-plugin.version>
 		<multi-module-maven-release-plugin.version>1.4.6</multi-module-maven-release-plugin.version>
 
 		<!-- Dependency versions -->
 		<org.osgi.core.version>6.0.0</org.osgi.core.version>
-		<slf4j-api.version>1.7.12</slf4j-api.version>
-		<geronimo-atinject_1.0_spec.version>1.0</geronimo-atinject_1.0_spec.version>
+		<slf4j-api.version>1.7.21</slf4j-api.version>
 		<commons-lang3.version>3.4</commons-lang3.version>
 		<commons-codec.version>1.10</commons-codec.version>
 		<junit.version>4.12</junit.version>
@@ -55,10 +54,10 @@
 
 		<objenesis.version>2.2</objenesis.version>
 		<javassist.version>3.20.0-GA</javassist.version>
-		<asm.version>5.0.4</asm.version>
+		<asm.version>5.1</asm.version>
 		<guice.version>4.0</guice.version>
-		<guava.version>19.0-rc2</guava.version>
-		<logback-core.version>1.1.6</logback-core.version>
+		<guava.version>19.0</guava.version>
+		<logback-core.version>1.1.7</logback-core.version>
 		<pax-exam.version>4.8.0</pax-exam.version>
 
 		<!-- Project encoding -->
@@ -67,7 +66,7 @@
 
 		<!-- Compiler configuration -->
 		<common.encoding>UTF-8</common.encoding>
-		<javaVersion>1.7</javaVersion>
+		<javaVersion>1.8</javaVersion>
 
 		<!-- Configuration for SCM, Build-Server and remote Maven Repository -->
 		<jenkins.baseurl>https://sourcepond.ci.cloudbees.com</jenkins.baseurl>
@@ -105,11 +104,6 @@
 				<groupId>commons-codec</groupId>
 				<artifactId>commons-codec</artifactId>
 				<version>${commons-codec.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.geronimo.specs</groupId>
-				<artifactId>geronimo-atinject_1.0_spec</artifactId>
-				<version>${geronimo-atinject_1.0_spec.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.javassist</groupId>
@@ -197,10 +191,6 @@
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-atinject_1.0_spec</artifactId>
 		</dependency>
 
 		<!-- Testing -->
