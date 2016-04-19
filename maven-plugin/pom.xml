@@ -39,6 +39,7 @@
 		
 		<!-- SCM configuration -->
 		<repo.project>${project.parent.artifactId}</repo.project>
+		<github.site.path>${project.version}/${project.artifactId}</github.site.path>
 	</properties>
 
 	<dependencyManagement>

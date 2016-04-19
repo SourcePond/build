@@ -31,6 +31,7 @@
 		
 		<!-- SCM configuration -->
 		<repo.project>build</repo.project>
+		<github.site.path>${project.version}/${project.artifactId}</github.site.path>
 	</properties>
 
 	<build>
