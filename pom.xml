@@ -416,10 +416,7 @@
 						</goals>
 						<phase>site</phase>
 						<configuration>
-							<message>Creating site for ${project.url} version
-								${project.version}</message>
-							<host>${repo.domain}</host>
-							<server>${github.global.server}</server>
+							<message><![CDATA[Creating site for ${project.url} version ${project.version}]]></message>
 							<path>${github.site.path}</path>
 						</configuration>
 					</execution>
