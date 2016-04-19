@@ -80,6 +80,9 @@
 		<deployment.baseurl>https://oss.sonatype.org</deployment.baseurl>
 		<!-- This property is also used by the github-site-plugin -->
 		<github.global.server>github</github.global.server>
+		<github.site.path>${project.version}</github.site.path>
+		<github.server.id>github</github.server.id>
+		<github.host>github.com</github.host>
 		<repo.domain>${github.global.server}.com</repo.domain>
 		<repo.project>${project.artifactId}</repo.project>
 		<repo.path>${project.organization.name}/${repo.project}</repo.path>
@@ -406,6 +409,25 @@
 				<artifactId>maven-site-plugin</artifactId>
 			</plugin>
 			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<configuration>
+					<message>Creating site for ${project.artifactId} /
+						${project.version}</message>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>site</phase>
+						<configuration>
+							<server>github</server>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
 				<groupId>com.github.danielflower.mavenplugins</groupId>
 				<artifactId>multi-module-maven-release-plugin</artifactId>
 				<configuration>
@@ -431,25 +453,6 @@
 			<id>release</id>
 			<build>
 				<plugins>
-					<plugin>
-						<groupId>com.github.github</groupId>
-						<artifactId>site-maven-plugin</artifactId>
-						<configuration>
-							<message>Creating site for ${project.artifactId} /
-								${project.version}</message>
-						</configuration>
-						<executions>
-							<execution>
-								<goals>
-									<goal>site</goal>
-								</goals>
-								<phase>site</phase>
-								<configuration>
-									<server>github</server>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
