@@ -84,7 +84,7 @@
 		<deployment.baseurl>https://oss.sonatype.org</deployment.baseurl>
 		<!-- This property is also used by the github-site-plugin -->
 		<github.global.server>github</github.global.server>
-		<github.site.path>${project.version}</github.site.path>
+		<github.site.path>${project.artifactId}/${project.version}</github.site.path>
 		<repo.domain>${github.global.server}.com</repo.domain>
 		<repo.project>${project.artifactId}</repo.project>
 		<repo.path>${project.organization.name}/${repo.project}</repo.path>
