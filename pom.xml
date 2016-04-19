@@ -421,7 +421,6 @@
 							<host>${repo.domain}</host>
 							<server>${github.global.server}</server>
 							<path>${github.site.path}</path>
-							<merge>true</merge>
 						</configuration>
 					</execution>
 				</executions>
