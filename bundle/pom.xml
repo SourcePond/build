@@ -26,8 +26,8 @@
 	</description>
 
 	<modules>
-		<module>../ds-bundle</module>
 		<module>../cdi-bundle</module>
+		<module>../ds-bundle</module>
 	</modules>
 
 	<properties>
