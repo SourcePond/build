@@ -269,36 +269,30 @@
 <th>Type</th>
 <th>Licenses</th></tr>
 <tr class="b">
-<td>com.google.code.findbugs</td>
-<td><a class="externalLink" href="http://findbugs.sourceforge.net/">jsr305</a></td>
-<td>3.0.1</td>
-<td>jar</td>
-<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr>
-<tr class="a">
 <td>com.google.guava</td>
 <td><a class="externalLink" href="https://github.com/google/guava/guava">guava</a></td>
 <td>19.0</td>
 <td>jar</td>
 <td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td>org.apache.commons</td>
 <td><a class="externalLink" href="http://commons.apache.org/proper/commons-lang/">commons-lang3</a></td>
 <td>3.4</td>
 <td>jar</td>
 <td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License, Version 2.0</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td>org.apache.maven</td>
 <td><a class="externalLink" href="http://maven.apache.org/ref/3.3.3/maven-core">maven-core</a></td>
 <td>3.3.3</td>
 <td>jar</td>
 <td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License, Version 2.0</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td>org.apache.maven</td>
 <td><a class="externalLink" href="http://maven.apache.org/ref/3.3.3/maven-plugin-api">maven-plugin-api</a></td>
 <td>3.3.3</td>
 <td>jar</td>
 <td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License, Version 2.0</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td>org.slf4j</td>
 <td><a class="externalLink" href="http://www.slf4j.org">slf4j-api</a></td>
 <td>1.7.21</td>
@@ -361,6 +355,12 @@
 <th>Type</th>
 <th>Licenses</th></tr>
 <tr class="b">
+<td>com.google.code.findbugs</td>
+<td><a class="externalLink" href="http://findbugs.sourceforge.net/">jsr305</a></td>
+<td>3.0.1</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr>
+<tr class="a">
 <td>org.apache.maven.plugin-tools</td>
 <td><a class="externalLink" href="http://maven.apache.org/plugin-tools/maven-plugin-annotations">maven-plugin-annotations</a></td>
 <td>3.4</td>
@@ -899,7 +899,7 @@
     per the JSR-305 spec.</p>
 <p><b>URL: </b><a class="externalLink" href="https://github.com/google/guava/guava">https://github.com/google/guava/guava</a></p>
 <p><b>Project Licenses: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div></li>
-<li>com.google.code.findbugs:jsr305:jar:3.0.1 (compile) <img id="_img65" src="./images/icon_info_sml.gif" alt="[Information]" onclick="toggleDependencyDetails( '_dep64', '_img65' );" style="cursor: pointer; vertical-align: text-bottom;"></img><div id="_dep64" style="display:none">
+<li>com.google.code.findbugs:jsr305:jar:3.0.1 (provided) <img id="_img65" src="./images/icon_info_sml.gif" alt="[Information]" onclick="toggleDependencyDetails( '_dep64', '_img65' );" style="cursor: pointer; vertical-align: text-bottom;"></img><div id="_dep64" style="display:none">
 <table border="0" class="table table-striped">
 <tr class="a">
 <th>FindBugs-jsr305</th></tr>
@@ -1329,13 +1329,13 @@
 <td>1.7</td>
 <td>37</td></tr>
 <tr class="a">
-<td>compile: 30</td>
+<td>compile: 29</td>
 <td>compile: 5.6 MB</td>
-<td>compile: 4485</td>
-<td>compile: 3867</td>
-<td>compile: 240</td>
+<td>compile: 4439</td>
+<td>compile: 3832</td>
+<td>compile: 237</td>
 <td>-</td>
-<td>compile: 28</td></tr>
+<td>compile: 27</td></tr>
 <tr class="b">
 <td>test: 8</td>
 <td>test: 4.5 MB</td>
@@ -1345,13 +1345,13 @@
 <td>-</td>
 <td>test: 8</td></tr>
 <tr class="a">
-<td>provided: 1</td>
-<td>provided: 14.2 kB</td>
-<td>provided: 22</td>
-<td>provided: 7</td>
-<td>provided: 1</td>
+<td>provided: 2</td>
+<td>provided: 34.2 kB</td>
+<td>provided: 68</td>
+<td>provided: 42</td>
+<td>provided: 4</td>
 <td>-</td>
-<td>provided: 1</td></tr></table></div><a name="Dependency_Repository_Locations"></a>
+<td>provided: 2</td></tr></table></div><a name="Dependency_Repository_Locations"></a>
 <div class="section">
 <h2><a name="Dependency_Repository_Locations"></a>Dependency Repository Locations</h2>
 <table border="0" class="table table-striped">
@@ -1767,7 +1767,7 @@
 <th>repository.jboss.org</th>
 <th>apache.snapshots</th></tr>
 <tr class="b">
-<td>39 (compile: 30, test: 8, provided: 1)</td>
+<td>39 (compile: 29, test: 8, provided: 2)</td>
 <td>0</td>
 <td>39</td>
 <td>0</td>
