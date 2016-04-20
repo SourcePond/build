@@ -269,24 +269,18 @@
 <th>Type</th>
 <th>Licenses</th></tr>
 <tr class="b">
-<td>com.google.code.findbugs</td>
-<td><a class="externalLink" href="http://findbugs.sourceforge.net/">jsr305</a></td>
-<td>3.0.1</td>
-<td>jar</td>
-<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr>
-<tr class="a">
 <td>com.google.guava</td>
 <td><a class="externalLink" href="https://github.com/google/guava/guava">guava</a></td>
 <td>19.0</td>
 <td>jar</td>
 <td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td>org.apache.commons</td>
 <td><a class="externalLink" href="http://commons.apache.org/proper/commons-lang/">commons-lang3</a></td>
 <td>3.4</td>
 <td>jar</td>
 <td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License, Version 2.0</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td>org.slf4j</td>
 <td><a class="externalLink" href="http://www.slf4j.org">slf4j-api</a></td>
 <td>1.7.21</td>
@@ -331,7 +325,23 @@
 <td><a class="externalLink" href="http://objenesis.org">objenesis</a></td>
 <td>2.2</td>
 <td>jar</td>
-<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr></table></div></div><a name="Project_Transitive_Dependencies"></a>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr></table></div><a name="Project_Dependencies_provided"></a>
+<div class="section">
+<h3><a name="provided"></a>provided</h3>
+<p>The following is a list of provided dependencies for this project. These dependencies are required to compile the application, but should be provided by default when using the library:</p>
+<table border="0" class="table table-striped">
+<tr class="a">
+<th>GroupId</th>
+<th>ArtifactId</th>
+<th>Version</th>
+<th>Type</th>
+<th>Licenses</th></tr>
+<tr class="b">
+<td>com.google.code.findbugs</td>
+<td><a class="externalLink" href="http://findbugs.sourceforge.net/">jsr305</a></td>
+<td>3.0.1</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr></table></div></div><a name="Project_Transitive_Dependencies"></a>
 <div class="section">
 <h2><a name="Project_Transitive_Dependencies"></a>Project Transitive Dependencies</h2>
 <p>The following is a list of transitive dependencies for this project. Transitive dependencies are the dependencies of the project dependencies.</p><a name="Project_Transitive_Dependencies_test"></a>
@@ -418,7 +428,7 @@
     per the JSR-305 spec.</p>
 <p><b>URL: </b><a class="externalLink" href="https://github.com/google/guava/guava">https://github.com/google/guava/guava</a></p>
 <p><b>Project Licenses: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div></li>
-<li>com.google.code.findbugs:jsr305:jar:3.0.1 (compile) <img id="_img9" src="./images/icon_info_sml.gif" alt="[Information]" onclick="toggleDependencyDetails( '_dep8', '_img9' );" style="cursor: pointer; vertical-align: text-bottom;"></img><div id="_dep8" style="display:none">
+<li>com.google.code.findbugs:jsr305:jar:3.0.1 (provided) <img id="_img9" src="./images/icon_info_sml.gif" alt="[Information]" onclick="toggleDependencyDetails( '_dep8', '_img9' );" style="cursor: pointer; vertical-align: text-bottom;"></img><div id="_dep8" style="display:none">
 <table border="0" class="table table-striped">
 <tr class="a">
 <th>FindBugs-jsr305</th></tr>
@@ -620,13 +630,13 @@
 <td>1.6</td>
 <td>11</td></tr>
 <tr class="a">
-<td>compile: 4</td>
+<td>compile: 3</td>
 <td>compile: 2.8 MB</td>
-<td>compile: 2086</td>
-<td>compile: 2010</td>
-<td>compile: 36</td>
+<td>compile: 2040</td>
+<td>compile: 1975</td>
+<td>compile: 33</td>
 <td>-</td>
-<td>compile: 4</td></tr>
+<td>compile: 3</td></tr>
 <tr class="b">
 <td>test: 7</td>
 <td>test: 4.1 MB</td>
@@ -634,7 +644,15 @@
 <td>test: 2774</td>
 <td>test: 195</td>
 <td>-</td>
-<td>test: 7</td></tr></table></div><a name="Dependency_Repository_Locations"></a>
+<td>test: 7</td></tr>
+<tr class="a">
+<td>provided: 1</td>
+<td>provided: 19.9 kB</td>
+<td>provided: 46</td>
+<td>provided: 35</td>
+<td>provided: 3</td>
+<td>-</td>
+<td>provided: 1</td></tr></table></div><a name="Dependency_Repository_Locations"></a>
 <div class="section">
 <h2><a name="Dependency_Repository_Locations"></a>Dependency Repository Locations</h2>
 <table border="0" class="table table-striped">
@@ -726,7 +744,7 @@
 <th>sonatype-nexus-snapshots</th>
 <th>apache.snapshots</th></tr>
 <tr class="b">
-<td>11 (compile: 4, test: 7)</td>
+<td>11 (compile: 3, test: 7, provided: 1)</td>
 <td>11</td>
 <td>0</td>
 <td>0</td></tr></table></div>
