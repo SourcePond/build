@@ -104,6 +104,12 @@
 				<artifactId>org.osgi.core</artifactId>
 				<version>${org.osgi.core.version}</version>
 			</dependency>
+			<dependency>
+				<scope>provided</scope>
+				<groupId>com.google.code.findbugs</groupId>
+				<artifactId>jsr305</artifactId>
+				<version>${jsr305.version}</version>
+			</dependency>
 
 			<!-- compile -->
 			<dependency>
@@ -140,11 +146,6 @@
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
 				<version>${guava.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.google.code.findbugs</groupId>
-				<artifactId>jsr305</artifactId>
-				<version>${jsr305.version}</version>
 			</dependency>
 
 			<!-- Testing -->
