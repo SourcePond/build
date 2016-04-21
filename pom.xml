@@ -442,10 +442,6 @@
 				<artifactId>jacoco-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-site-plugin</artifactId>
-			</plugin>
-			<plugin>
 				<groupId>com.github.danielflower.mavenplugins</groupId>
 				<artifactId>multi-module-maven-release-plugin</artifactId>
 				<configuration>
