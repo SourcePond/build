@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>ch.sourcepond</groupId>
 		<artifactId>build</artifactId>
-		<version>0.5-SNAPSHOT</version>
+		<version>0.6-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ch.sourcepond.maven.plugins</groupId>
