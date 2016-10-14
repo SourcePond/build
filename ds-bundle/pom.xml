@@ -27,7 +27,7 @@
 
 	<properties>
 		<!-- Plugin versions -->
-		<maven-scr-plugin.version>1.21.0</maven-scr-plugin.version>
+		<maven-scr-plugin.version>1.22.0</maven-scr-plugin.version>
 		
 		<!-- SCM configuration -->
 		<repo.project>build</repo.project>

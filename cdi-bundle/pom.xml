@@ -27,7 +27,7 @@
 
 	<properties>
 		<!-- Plugin versions -->
-		<maven-scr-plugin.version>1.21.0</maven-scr-plugin.version>
+		<maven-scr-plugin.version>1.22.0</maven-scr-plugin.version>
 
 		<!-- Dependency versions -->
 		<pax-cdi-api.version>1.0.0.RC1</pax-cdi-api.version>
