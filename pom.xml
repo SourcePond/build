@@ -42,7 +42,7 @@
 		<maven-site-plugin.version>3.5.1</maven-site-plugin.version>
 		<maven-project-info-reports-plugin.version>2.9</maven-project-info-reports-plugin.version>
 		<github.site-maven-plugin.version>0.12</github.site-maven-plugin.version>
-		<multi-module-maven-release-plugin.version>2.0.8</multi-module-maven-release-plugin.version>
+		<multi-module-release-maven-plugin.version>1.0.1</multi-module-release-maven-plugin.version>
 		<maven-checkstyle-plugin.version>2.17</maven-checkstyle-plugin.version>
 		<maven-pmd-plugin.version>3.6</maven-pmd-plugin.version>
 		<findbugs-maven-plugin.version>3.0.4</findbugs-maven-plugin.version>
@@ -356,9 +356,9 @@
 					<version>${github.site-maven-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>com.github.danielflower.mavenplugins</groupId>
-					<artifactId>multi-module-maven-release-plugin</artifactId>
-					<version>${multi-module-maven-release-plugin.version}</version>
+					<groupId>ch.sourcepond.maven.plugins</groupId>
+					<artifactId>multi-module-release-maven-plugin</artifactId>
+					<version>${multi-module-release-maven-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -448,8 +448,8 @@
 				<artifactId>jacoco-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-				<groupId>com.github.danielflower.mavenplugins</groupId>
-				<artifactId>multi-module-maven-release-plugin</artifactId>
+				<groupId>ch.sourcepond.maven.plugins</groupId>
+				<artifactId>multi-module-release-maven-plugin</artifactId>
 				<configuration>
 					<serverId>github</serverId>
 					<knownHosts>/private/sourcepond/.ssh/known_hosts</knownHosts>
