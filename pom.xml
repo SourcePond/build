@@ -630,6 +630,7 @@
 					</reportSet>
 					<reportSet>
 						<id>aggregate</id>
+						<inherited>false</inherited><!-- don't run aggregate in child modules -->
 						<reports>
 							<report>aggregate</report>
 						</reports>
@@ -639,6 +640,15 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jxr-plugin</artifactId>
+				<reportSets>
+					<reportSet>
+						<id>aggregate</id>
+						<inherited>false</inherited>
+						<reports>
+							<report>aggregate</report>
+						</reports>
+					</reportSet>
+				</reportSets>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
