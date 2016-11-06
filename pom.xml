@@ -573,7 +573,7 @@
 		</snapshotRepository>
 		<site>
 			<id>www.sourcepond.ch</id>
-			<url>file:///srv/www/htdocs/projects/${project.groupId}/${project.artifactId}/${project.version}</url>
+			<url>file:///site-target/${project.groupId}/${project.artifactId}/${project.version}</url>
 		</site>
 	</distributionManagement>
 
