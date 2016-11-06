@@ -43,7 +43,6 @@
 		<maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
 		<maven-site-plugin.version>3.5.1</maven-site-plugin.version>
 		<maven-project-info-reports-plugin.version>2.9</maven-project-info-reports-plugin.version>
-		<github.site-maven-plugin.version>0.12</github.site-maven-plugin.version>
 		<multi-module-release-maven-plugin.version>2.0.2</multi-module-release-maven-plugin.version>
 		<maven-checkstyle-plugin.version>2.17</maven-checkstyle-plugin.version>
 		<maven-pmd-plugin.version>3.6</maven-pmd-plugin.version>
@@ -346,11 +345,6 @@
 					<version>${maven-project-info-reports-plugin.version}</version>
 				</plugin>
 				<plugin>
-					<groupId>com.github.github</groupId>
-					<artifactId>site-maven-plugin</artifactId>
-					<version>${github.site-maven-plugin.version}</version>
-				</plugin>
-				<plugin>
 					<groupId>ch.sourcepond.maven.plugins</groupId>
 					<artifactId>multi-module-release-maven-plugin</artifactId>
 					<version>${multi-module-release-maven-plugin.version}</version>
@@ -481,31 +475,6 @@
 	</build>
 
 	<profiles>
-		<profile>
-			<id>gh-pages</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>com.github.github</groupId>
-						<artifactId>site-maven-plugin</artifactId>
-						<executions>
-							<execution>
-								<goals>
-									<goal>site</goal>
-								</goals>
-								<phase>site</phase>
-								<configuration>
-									<message><![CDATA[Creating site for ${project.url} version ${project.version}]]></message>
-									<path>${github.site.path}</path>
-									<merge>true</merge>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-
 		<!-- Profile for running release builds -->
 		<profile>
 			<id>release</id>
