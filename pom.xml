@@ -458,16 +458,13 @@
 				<artifactId>multi-module-release-maven-plugin</artifactId>
 				<configuration>
 					<serverId>github</serverId>
-					<knownHosts>/private/sourcepond/.ssh/known_hosts</knownHosts>
-					<userSettings>/private/sourcepond/settings.xml</userSettings>
 					<releaseGoals>
 						<releaseGoal>clean</releaseGoal>
 						<releaseGoal>deploy</releaseGoal>
-						<releaseGoal>site</releaseGoal>
+						<releaseGoal>site-deploy</releaseGoal>
 					</releaseGoals>
 					<releaseProfiles>
 						<releaseProfile>release</releaseProfile>
-						<releaseProfile>gh-pages</releaseProfile>
 					</releaseProfiles>
 				</configuration>
 			</plugin>
