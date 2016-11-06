@@ -482,26 +482,6 @@
 
 	<profiles>
 		<profile>
-			<id>test-site</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-site-plugin</artifactId>
-						<executions>
-							<execution>
-								<phase>deploy</phase>
-								<goals>
-									<goal>deploy</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-
-		<profile>
 			<id>gh-pages</id>
 			<build>
 				<plugins>
@@ -593,7 +573,7 @@
 		</snapshotRepository>
 		<site>
 			<id>www.sourcepond.ch</id>
-			<url>file:///srv/www/htdocs/projects</url>
+			<url>file:///srv/www/htdocs/projects/${project.groupId}/${project.artifactId}/${project.version}</url>
 		</site>
 	</distributionManagement>
 
