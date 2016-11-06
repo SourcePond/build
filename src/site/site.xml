@@ -19,6 +19,7 @@
         </fluidoSkin>
     </custom>
     <body>
+     	<menu inherit="true" />
         <menu ref="reports" inherit="top"/>
     </body>
 </project>

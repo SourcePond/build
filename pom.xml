@@ -85,6 +85,10 @@
 		<!-- Version for Maven site skin -->
 		<maven-fluido-skin.version>1.5</maven-fluido-skin.version>
 
+		<!-- standard base URL for deployed web sites: -->
+		<distribution.repository.website>file:///site-target</distribution.repository.website>
+		<base.site.url>http://vps1220936.vs.server-hosting.expert</base.site.url>
+
 		<!-- Configuration for SCM, Build-Server and remote Maven Repository -->
 		<jenkins.baseurl>https://sourcepond.ci.cloudbees.com</jenkins.baseurl>
 		<deployment.baseurl>https://oss.sonatype.org</deployment.baseurl>
@@ -557,7 +561,7 @@
 		</profile>
 	</profiles>
 
-	<url>https://sourcepond.github.io/${repo.project}</url>
+	<url>${base.site.url}/${project.groupId}/${project.artifactId}/${project.version}</url>
 
 	<scm>
 		<url>https://${repo.domain}/${repo.path}</url>
@@ -591,7 +595,7 @@
 		</snapshotRepository>
 		<site>
 			<id>www.sourcepond.ch</id>
-			<url>file:///site-target/${project.groupId}/${project.artifactId}/${project.version}</url>
+			<url>${distribution.repository.website}/${project.groupId}/${project.artifactId}/${project.version}</url>
 		</site>
 	</distributionManagement>
 
