@@ -578,7 +578,7 @@
 	</licenses>
 
 	<ciManagement>
-		<url>${jenkins.baseurl}/</url>
+		<url>${jenkins.baseurl}/job/${project.artifactId}</url>
 		<system>Jenkins</system>
 	</ciManagement>
 
