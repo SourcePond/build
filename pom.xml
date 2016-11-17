@@ -58,13 +58,13 @@
 
 		<!-- Dependency versions -->
 		<org.osgi.core.version>6.0.0</org.osgi.core.version>
-		<slf4j-api.version>1.7.21</slf4j-api.version>
+		<slf4j-api.version>[1.7,2.0)</slf4j-api.version>
 		<jsr305.version>3.0.1</jsr305.version>
 		<org.apache.servicemix.bundles.javax-inject.version>1_2</org.apache.servicemix.bundles.javax-inject.version>
 		<commons-lang3.version>3.5</commons-lang3.version>
 		<commons-codec.version>1.10</commons-codec.version>
 		<junit.version>4.12</junit.version>
-		<mockito.version>2.2.1</mockito.version>
+		<mockito.version>2.2.19</mockito.version>
 
 		<objenesis.version>2.4</objenesis.version>
 		<javassist.version>3.21.0-GA</javassist.version>
@@ -87,10 +87,10 @@
 
 		<!-- standard base URL for deployed web sites: -->
 		<site.distribution.url>file:///site-target</site.distribution.url>
-		<base.site.url>http://vps1220936.vs.server-hosting.expert</base.site.url>
+		<base.site.url>https://sourcepond.ch</base.site.url>
 
 		<!-- Configuration for SCM, Build-Server and remote Maven Repository -->
-		<jenkins.baseurl>https://sourcepond.ci.cloudbees.com</jenkins.baseurl>
+		<jenkins.baseurl>${base.site.url}/jenkins</jenkins.baseurl>
 		<deployment.baseurl>https://oss.sonatype.org</deployment.baseurl>
 		<!-- This property is also used by the github-site-plugin -->
 		<github.global.server>github</github.global.server>
