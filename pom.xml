@@ -55,6 +55,7 @@
 		<maven-dependency-plugin.version>2.10</maven-dependency-plugin.version>
 		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
 		<maven-shade-plugin.version>2.4.3</maven-shade-plugin.version>
+		<sonar-maven-plugin.version>3.2</sonar-maven-plugin.version>
 
 		<!-- Dependency versions -->
 		<org.osgi.core.version>6.0.0</org.osgi.core.version>
@@ -81,6 +82,9 @@
 		<!-- Compiler configuration -->
 		<common.encoding>UTF-8</common.encoding>
 		<javaVersion>1.8</javaVersion>
+
+		<!-- Configuration for Sonar -->
+		<sonar.language>java</sonar.language>
 
 		<!-- Version for Maven site skin -->
 		<maven-fluido-skin.version>1.5</maven-fluido-skin.version>
@@ -244,6 +248,11 @@
 	<build>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.sonarsource.scanner.maven</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>${sonar-maven-plugin.version}</version>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-deploy-plugin</artifactId>
@@ -412,6 +421,10 @@
 		</pluginManagement>
 
 		<plugins>
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
