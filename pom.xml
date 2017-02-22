@@ -67,6 +67,7 @@
 		<org.apache.servicemix.bundles.javax-inject.version>1_2</org.apache.servicemix.bundles.javax-inject.version>
 		<commons-lang3.version>3.5</commons-lang3.version>
 		<commons-codec.version>1.10</commons-codec.version>
+		<tinybundles.version>2.1.1</tinybundles.version>
 		<junit.version>4.12</junit.version>
 		<mockito.version>2.7.11</mockito.version>
 
@@ -195,6 +196,24 @@
 				<groupId>org.objenesis</groupId>
 				<artifactId>objenesis</artifactId>
 				<version>${objenesis.version}</version>
+			</dependency>
+			<dependency>
+				<scope>test</scope>
+				<groupId>org.ops4j.pax.tinybundles</groupId>
+				<artifactId>tinybundles</artifactId>
+				<version>${tinybundles.version}</version>
+			</dependency>
+			<dependency>
+				<scope>test</scope>
+				<groupId>org.ops4j.pax.exam</groupId>
+				<artifactId>pax-exam-junit4</artifactId>
+				<version>${pax-exam.version}</version>
+			</dependency>
+			<dependency>
+				<scope>test</scope>
+				<groupId>org.ops4j.pax.exam</groupId>
+				<artifactId>pax-exam-container-karaf</artifactId>
+				<version>${pax-exam.version}</version>
 			</dependency>
 			<dependency>
 				<scope>test</scope>
