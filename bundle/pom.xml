@@ -32,6 +32,7 @@
 
 	<properties>
 		<org.osgi.enterprise.version>5.0.0</org.osgi.enterprise.version>
+		<org.apache.felix.dependencymanager.version>4.4.0</org.apache.felix.dependencymanager.version>
 
 		<!-- Plugin versions -->
 		<maven-bundle-plugin.version>3.2.0</maven-bundle-plugin.version>
@@ -54,6 +55,11 @@
 				<groupId>org.osgi</groupId>
 				<artifactId>osgi.cmpn</artifactId>
 				<version>${org.osgi.core.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>org.apache.felix.dependencymanager</artifactId>
+				<version>${org.apache.felix.dependencymanager.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

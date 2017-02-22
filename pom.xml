@@ -31,7 +31,7 @@
 
 	<properties>
 		<!-- Apache Karaf, used for feature-plugin and Pax-Exam tests -->
-		<karaf.version>4.1.0</karaf.version>
+		<karaf.version>4.0.8</karaf.version>
 
 		<!-- Plugin versions -->
 		<maven-compiler-plugin>3.6.1</maven-compiler-plugin>
@@ -68,7 +68,7 @@
 		<commons-lang3.version>3.5</commons-lang3.version>
 		<commons-codec.version>1.10</commons-codec.version>
 		<junit.version>4.12</junit.version>
-		<mockito.version>2.7.5</mockito.version>
+		<mockito.version>2.7.11</mockito.version>
 
 		<objenesis.version>2.5.1</objenesis.version>
 		<javassist.version>3.21.0-GA</javassist.version>
@@ -136,6 +136,17 @@
 				<version>${org.apache.servicemix.bundles.javax-inject.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>com.google.inject</groupId>
+				<artifactId>guice</artifactId>
+				<version>${guice.version}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>javax.inject</artifactId>
+						<groupId>javax.inject</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
 				<version>${commons-lang3.version}</version>
@@ -184,18 +195,6 @@
 				<groupId>org.objenesis</groupId>
 				<artifactId>objenesis</artifactId>
 				<version>${objenesis.version}</version>
-			</dependency>
-			<dependency>
-				<scope>test</scope>
-				<groupId>com.google.inject</groupId>
-				<artifactId>guice</artifactId>
-				<version>${guice.version}</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>javax.inject</artifactId>
-						<groupId>javax.inject</groupId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			<dependency>
 				<scope>test</scope>
