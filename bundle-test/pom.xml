@@ -32,7 +32,7 @@
 		<!-- Dependency versions -->
 		<org.apache.felix.framework.version>5.6.2</org.apache.felix.framework.version>
 		<biz.aQute.bndlib.version>3.3.0</biz.aQute.bndlib.version>
-		<bundle-test-support.version>0.1.7</bundle-test-support.version>
+		<bundle-test-support.version>0.1.10</bundle-test-support.version>
 		<pax-url.version>2.5.2</pax-url.version>
 		<net.bytebuddy.version>1.6.9</net.bytebuddy.version>
 
