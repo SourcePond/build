@@ -30,6 +30,8 @@
 		<depends-maven-plugin.version>1.3.1</depends-maven-plugin.version>
 
 		<!-- Dependency versions -->
+		<org.apache.felix.framework.version>5.6.2</org.apache.felix.framework.version>
+		<biz.aQute.bndlib.version>3.3.0</biz.aQute.bndlib.version>
 		<bundle-test-support.version>0.1.7</bundle-test-support.version>
 		<pax-url.version>2.5.2</pax-url.version>
 		<net.bytebuddy.version>1.6.9</net.bytebuddy.version>
@@ -41,6 +43,26 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<!-- Runtime dependencies -->
+			<dependency>
+				<scope>runtime</scope>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>org.apache.felix.framework</artifactId>
+				<version>${org.apache.felix.framework}</version>
+			</dependency>
+			<dependency>
+				<scope>runtime</scope>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>biz.aQute.bndlib</artifactId>
+				<version>${biz.aQute.bndlib.version}</version>
+			</dependency>
+			<dependency>
+				<scope>runtime</scope>
+				<groupId>org.apache.karaf</groupId>
+				<artifactId>org.apache.karaf.exception</artifactId>
+				<version>${karaf.version}</version>
+			</dependency>
+
 			<!-- Test dependencies -->
 			<dependency>
 				<scope>test</scope>
@@ -58,6 +80,12 @@
 				<scope>test</scope>
 				<groupId>net.bytebuddy</groupId>
 				<artifactId>byte-buddy</artifactId>
+				<version>${net.bytebuddy.version}</version>
+			</dependency>
+			<dependency>
+				<scope>test</scope>
+				<groupId>net.bytebuddy</groupId>
+				<artifactId>byte-buddy-agent</artifactId>
 				<version>${net.bytebuddy.version}</version>
 			</dependency>
 		</dependencies>

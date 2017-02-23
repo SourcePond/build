@@ -61,6 +61,7 @@
 		<sonar-maven-plugin.version>3.2</sonar-maven-plugin.version>
 
 		<!-- Dependency versions -->
+		<org.apache.felix.dependencymanager.version>4.4.0</org.apache.felix.dependencymanager.version>
 		<org.osgi.core.version>6.0.0</org.osgi.core.version>
 		<slf4j-api.version>[1.7,2.0)</slf4j-api.version>
 		<jsr305.version>3.0.1</jsr305.version>
@@ -126,6 +127,11 @@
 			</dependency>
 
 			<!-- compile -->
+			<dependency>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>org.apache.felix.dependencymanager</artifactId>
+				<version>${org.apache.felix.dependencymanager.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
