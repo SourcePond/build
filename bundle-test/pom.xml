@@ -48,7 +48,7 @@
 				<scope>runtime</scope>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>org.apache.felix.framework</artifactId>
-				<version>${org.apache.felix.framework}</version>
+				<version>${org.apache.felix.framework.version}</version>
 			</dependency>
 			<dependency>
 				<scope>runtime</scope>

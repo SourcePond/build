@@ -91,6 +91,7 @@
 		<!-- Configuration for Sonar -->
 		<sonar.language>java</sonar.language>
 
+
 		<!-- Version for Maven site skin -->
 		<maven-fluido-skin.version>1.6</maven-fluido-skin.version>
 
