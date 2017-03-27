@@ -34,12 +34,12 @@
 		<karaf.version>4.0.8</karaf.version>
 
 		<!-- Plugin versions -->
-		<maven-compiler-plugin>3.6.1</maven-compiler-plugin>
+		<maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
 		<maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
 		<maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
 		<maven-failsafe-plugin.version>2.19.1</maven-failsafe-plugin.version>
 		<maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
-		<nexus-staging-maven-plugin>1.6.8</nexus-staging-maven-plugin>
+		<nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
 		<jacoco-maven-plugin.version>0.7.9</jacoco-maven-plugin.version>
 		<maven-source-plugin.version>3.0.1</maven-source-plugin.version>
 		<maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
@@ -353,7 +353,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>${maven-compiler-plugin}</version>
+					<version>${maven-compiler-plugin.version}</version>
 					<configuration>
 						<encoding>${common.encoding}</encoding>
 						<source>${javaVersion}</source>
@@ -373,7 +373,7 @@
 				<plugin>
 					<groupId>org.sonatype.plugins</groupId>
 					<artifactId>nexus-staging-maven-plugin</artifactId>
-					<version>${nexus-staging-maven-plugin}</version>
+					<version>${nexus-staging-maven-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
