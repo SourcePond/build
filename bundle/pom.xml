@@ -34,7 +34,7 @@
 		<org.osgi.enterprise.version>5.0.0</org.osgi.enterprise.version>
 
 		<!-- Plugin versions -->
-		<maven-bundle-plugin.version>3.2.0</maven-bundle-plugin.version>
+		<maven-bundle-plugin.version>3.3.0</maven-bundle-plugin.version>
 
 		<!-- SCM configuration -->
 		<repo.project>${project.parent.artifactId}</repo.project>
